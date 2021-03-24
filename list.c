@@ -43,12 +43,12 @@ void * firstList(List * list) {
 }
 
 void * nextList(List * list) { 
+    list->current=list->head->next;
     if(list->current==NULL){
 
       free(list->current);
       return NULL;
-    }
-list->current=list->head->next;
+    }else
     return (void*) list->current->data;
 }
 
