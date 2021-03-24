@@ -173,3 +173,9 @@ Wed Mar 24 17:40:43 UTC 2021:
  1 file changed, 2 insertions(+), 1 deletion(-)
  tests:  0|0
 f24b62a
+Wed Mar 24 17:41:02 UTC 2021: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  4|5
+total_score: 15/70
+116eda1
