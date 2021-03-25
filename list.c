@@ -44,7 +44,7 @@ void * firstList(List * list) {
 
 void * nextList(List * list) { 
     list->current->next=list->current;
-      return (void*) list->current->next->data;
+      return (void*) list->current->data;
 }
 
 void * lastList(List * list) {
