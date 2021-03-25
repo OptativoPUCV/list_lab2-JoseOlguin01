@@ -44,11 +44,10 @@ void * firstList(List * list) {
 
 void * nextList(List * list) { 
     list->current=list->current->next;
-    list->head=list->current;
-    if(list->current==NULL){
-      
+    if(list->current->next==NULL){
       return NULL;
     }else{
+      list->current=list->current->next;
       return (void*) list->current->data;
     }
 }
@@ -62,10 +61,10 @@ void * prevList(List * list) {
     return NULL;
 }
 
-void pushFront(List * list, const void * data) {
+void pushFront(List * list,const void * data) {
 }
 
-void pushBack(List * list, const void * data) {
+void pushBack(List * list,  const void * data) {
     list->current = list->tail;
     pushCurrent(list,data);
 }
