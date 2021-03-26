@@ -91,7 +91,7 @@ list->head=a;
 a->next=list->head;
 a->prev=list->head->next;
 list->tail=a;
-a->prev=list->tail;
+a->next=list->tail;
 a->next=list->tail->next;
 }
 
