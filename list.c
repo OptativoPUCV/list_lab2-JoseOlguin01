@@ -73,11 +73,7 @@ if(list->head==NULL){
 
 }
 x->next=list->head;
-if(list->head!=NULL){
-    list->head->prev=x;
-    list->head=x;
-    x->prev=NULL;
-  }
+
 }
 
 void pushBack(List * list,  const void * data) {
