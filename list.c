@@ -91,9 +91,7 @@ list->head=a;
 a->next=list->head;
 a->prev=list->head->next;
 list->tail->next=a;
-list->tail=a;
-a->next=list->tail;
-a->prev=list->tail->prev;
+
 }
 
 void * popFront(List * list) {
