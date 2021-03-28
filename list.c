@@ -90,7 +90,7 @@ Node* a=createNode( (void*) data);
   a->prev=list->head;
   pushBack(list,data);
   list->tail=a;
-  a->next=list->current->next;
+  a->next=list->current->prev;
 }
 void * popFront(List * list) {
     list->current = list->head;
