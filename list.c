@@ -91,7 +91,6 @@ Node* a=createNode( (void*) data);
     list->head=a;
     list->tail=a;
   }
-
 a->next=list->tail;
 list->tail=a;
 a->prev=list->head;
@@ -112,6 +111,10 @@ void * popBack(List * list) {
 void * popCurrent(List * list) {
     Node *x=createNode((void*) list->current->data);
     x=list->current;
+    if(list->head==NULL){
+      list->head=x;
+      list->tail=x;
+    }
     if(list->current==NULL){
       return NULL;
     } 
