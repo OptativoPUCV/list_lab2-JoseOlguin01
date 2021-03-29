@@ -90,6 +90,7 @@ Node* a=createNode( (void*) data);
     list->head=a;
     list->tail=a;
   }
+pushBack(list,data);
 a->next=list->tail;
 list->tail=a;
 a->prev=list->head;
