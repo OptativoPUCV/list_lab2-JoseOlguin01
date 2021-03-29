@@ -114,6 +114,7 @@ void * popCurrent(List * list) {
       list->head=x;
       list->tail=x;
     }
+    popFront(list);
     x=list->current;
     if(list->current==NULL){
       return NULL;
@@ -124,6 +125,7 @@ void * popCurrent(List * list) {
     if(x->prev!=NULL){
       x->prev->next=x->next;
     }
+    free(list->current);
     return x->next->data;
 }
 
