@@ -90,8 +90,7 @@ Node* a=createNode( (void*) data);
     list->head=a;
     list->tail=a;
   }
-
-list->head->next=a->next;
+list->head->next=a;
 }
 void * popFront(List * list) {
     list->current = list->head;
