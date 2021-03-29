@@ -1311,3 +1311,9 @@ free(): double free detected in tcache 2
  tests:  0|0
 free(): double free detected in tcache 2
 e77f4c2
+Mon Mar 29 20:24:58 UTC 2021: 
+ list.c | 3 +++
+ 1 file changed, 3 insertions(+)
+ tests:  11|1
+total_score: 55/70
+df4aae2
