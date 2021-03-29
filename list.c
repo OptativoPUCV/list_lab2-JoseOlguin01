@@ -114,7 +114,7 @@ void * popCurrent(List * list) {
       list->head=x;
       list->tail=x;
     }
-    popFront(list);
+    
     x=list->current;
     if(list->current==NULL){
       return NULL;
