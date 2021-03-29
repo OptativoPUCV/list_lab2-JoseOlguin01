@@ -82,6 +82,7 @@ if(list->head!=NULL){
 
 void pushBack(List * list,  const void * data) {
     list->current = list->tail;
+    return pushCurrent(list,data);
 }
 
 void pushCurrent(List * list, const void * data) {
@@ -109,7 +110,18 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-    return NULL;
+    Node *x=createNode((void*) list->current->data);
+    x=list->current;
+    if(list->current==NULL){
+      return NULL;
+    } 
+    if(x->next!=NULL){
+      x->next->prev=x->prev;
+    }
+    if(x->prev!=NULL){
+      x->prev->next=x->next;
+    }
+    return x->next->data;
 }
 
 void cleanList(List * list) {
