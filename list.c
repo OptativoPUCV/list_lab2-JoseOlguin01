@@ -113,6 +113,7 @@ void * popCurrent(List * list) {
     void *a;
     list->tail=x;
     list->head=x;
+    list->head->next=x;
     list->current=x;
     a=list->current->data;
     if(list->current==NULL){
