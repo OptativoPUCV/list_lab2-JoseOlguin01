@@ -90,7 +90,7 @@ Node* a=createNode( (void*) data);
     list->head=a;
     list->tail=a;
   }
-a->next=list->current->prev;
+a->next=list->current->next;
 list->tail=a;
 a->prev=list->head;
 list->head->next=a;
